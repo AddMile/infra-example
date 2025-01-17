@@ -21,7 +21,7 @@ resource "google_storage_bucket" "terraform_state" {
 }
 
 resource "google_secret_manager_secret" "env" {
-  secret_id = "backend-env"
+  secret_id = "example-env"
   replication {
     auto {}
   }
@@ -175,7 +175,7 @@ module "load_balancer" {
 
   name         = var.load_balancer_name
   service_name = var.api_name
-  domains      = var.backend_api_domains
+  domains      = var.example_api_domains
 
   depends_on = [
     module.api,

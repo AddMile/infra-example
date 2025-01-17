@@ -167,7 +167,7 @@ variable "load_balancer_name" {
 
 variable "example_api_domains" {
   type    = set(string)
-  default = ["api.projecttech-dev.com"]
+  default = ["api.example.com"]
 }
 
 # Cloud SQL
